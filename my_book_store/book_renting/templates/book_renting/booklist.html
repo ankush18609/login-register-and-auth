@@ -1,0 +1,21 @@
+<html><body>
+    <h1>Books</h1>
+
+    <table>
+        <tr>
+            <td><h1>Title</h1></td>
+            <td><h1>author</h1></td>
+            <td><h1>No of copies available</h1></td>
+        </tr>
+        {% for book in books %}
+        <tr> 
+
+        <td>{{ book.title }}</td>
+        <td>{{book.author}}</td>
+        <td>{{book.instance}}</td>
+        </tr>
+      
+        {% endfor %}
+        <a href={%url 'logout' %}>Log out</a>
+    </table>
+    </body></html>

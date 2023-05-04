@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>{% block title %}Django Project{% endblock %}</title>
+  </head>
+  <body>
+    <header>
+        <h1> HI {{user}} Welcome to Book Store</h1>
+        <br></br>
+      <h1></h1>
+      <a href="{%url 'Book_renting:view'%}">See all books Available</a>
+      <a href="{%url 'Book_renting:add'%}">Add a book</a>
+      <a href="{%url 'Book_renting:rent'%}">See all rented books</a>
+      <a href="{%url 'Book_renting:renting'%}">Rent a book</a>
+      <a href="{%url 'logout'%}">Logout</a>
+      <hr>
+    </header>
+    <main>
+      {% block content %}
+      {% endblock %}
+    </main>
+  </body>
+</html>

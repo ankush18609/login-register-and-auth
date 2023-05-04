@@ -1,0 +1,22 @@
+<html><body>
+    <h1>Books</h1>
+
+    <table>
+        <tr>
+            <td><h1>renting date</h1></td>
+            <td><h1>returning date</h1></td>
+            <td><h1>email-id</h1></td>
+            <td><h1>book-name</h1></td>
+        </tr>
+        {% for book in books %}
+        <tr> 
+
+        <td>{{ book.renting_date }}</td>
+        <td>{{book.due_date}}</td>
+        <td>{{book.email_id}}</td>
+        <td>{{book.renting_book}}</td>
+        </tr>
+        <a href={%url logout %}>Log out</a>
+        {% endfor %}
+    </table>
+    </body></html>
